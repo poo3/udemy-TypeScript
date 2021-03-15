@@ -12,6 +12,6 @@ var Bob = new Person("Bob");
 console.log(Bob);
 var anotherPerson = {
     name: 'James',
-    anotherGreeting: Bob.greeting
+    greeting: Bob.greeting
 };
-anotherPerson.anotherGreeting();
+anotherPerson.greeting();
