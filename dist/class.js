@@ -21,10 +21,10 @@ var Person = /** @class */ (function () {
     }
     Person.isAdult = function (age) {
         if (age > 20) {
-            return 'Adult Person';
+            return "Adult Person";
         }
         else {
-            return 'Child Person';
+            return "Child Person";
         }
     };
     Person.prototype.incrementAge = function () {
@@ -32,8 +32,9 @@ var Person = /** @class */ (function () {
     };
     Person.prototype.greeting = function () {
         console.log("Hello! My name is " + this.name + ". I am " + this.age + " years old ");
+        this.explainJob();
     };
-    Person.species = 'Homo sapiens';
+    Person.species = "Homo sapiens";
     return Person;
 }());
 var Teacher = /** @class */ (function (_super) {
@@ -43,6 +44,9 @@ var Teacher = /** @class */ (function (_super) {
         _this._subject = _subject;
         return _this;
     }
+    Teacher.prototype.explainJob = function () {
+        console.log("My job is " + this._subject + "!!");
+    };
     Object.defineProperty(Teacher.prototype, "subject", {
         get: function () {
             if (!this._subject) {
@@ -59,10 +63,9 @@ var Teacher = /** @class */ (function (_super) {
         enumerable: false,
         configurable: true
     });
-    Teacher.prototype.greeting = function () {
-        console.log("Hello! My name is " + this.name + ". I am " + this.age + " years old. I teach " + this.subject + ".");
-    };
     return Teacher;
 }(Person));
 console.log(Person.species);
 console.log(Person.isAdult(30));
+var Washizawa = new Teacher("Washizawa", 33, "science");
+Washizawa.greeting();

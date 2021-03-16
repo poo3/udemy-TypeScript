@@ -1,10 +1,10 @@
-class Person {
-  static species = 'Homo sapiens';
-  static isAdult(age: number){
-    if(age > 20){
-      return 'Adult Person';
-    }else{
-      return 'Child Person';
+abstract class Person {
+  static species = "Homo sapiens";
+  static isAdult(age: number) {
+    if (age > 20) {
+      return "Adult Person";
+    } else {
+      return "Child Person";
     }
   }
   constructor(public name: string, protected age: number) {}
@@ -15,10 +15,16 @@ class Person {
 
   greeting(this: Person) {
     console.log(`Hello! My name is ${this.name}. I am ${this.age} years old `);
+    this.explainJob();
   }
+
+  abstract explainJob(): void;
 }
 
 class Teacher extends Person {
+  explainJob(this: Teacher): void {
+    console.log(`My job is ${this._subject}!!`);
+  }
   get subject(): string {
     if (!this._subject) {
       throw new Error("There is no subject");
@@ -34,13 +40,10 @@ class Teacher extends Person {
   constructor(name: string, age: number, public _subject: string) {
     super(name, age);
   }
-
-  greeting(this: Teacher) {
-    console.log(
-      `Hello! My name is ${this.name}. I am ${this.age} years old. I teach ${this.subject}.`
-    );
-  }
 }
 
 console.log(Person.species);
-console.log(Person.isAdult(30))
+console.log(Person.isAdult(30));
+
+const Washizawa = new Teacher("Washizawa", 33, "science");
+Washizawa.greeting();
