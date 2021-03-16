@@ -19,12 +19,21 @@ var Person = /** @class */ (function () {
         this.name = name;
         this.age = age;
     }
+    Person.isAdult = function (age) {
+        if (age > 20) {
+            return 'Adult Person';
+        }
+        else {
+            return 'Child Person';
+        }
+    };
     Person.prototype.incrementAge = function () {
         this.age += 1;
     };
     Person.prototype.greeting = function () {
         console.log("Hello! My name is " + this.name + ". I am " + this.age + " years old ");
     };
+    Person.species = 'Homo sapiens';
     return Person;
 }());
 var Teacher = /** @class */ (function (_super) {
@@ -55,9 +64,5 @@ var Teacher = /** @class */ (function (_super) {
     };
     return Teacher;
 }(Person));
-var Bob = new Person("Bob", 24);
-console.log(Bob);
-var Washizawa = new Teacher("Washizawa", 30, "science");
-Washizawa.greeting();
-Washizawa.subject = "math";
-console.log(Washizawa.subject);
+console.log(Person.species);
+console.log(Person.isAdult(30));

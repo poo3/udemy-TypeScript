@@ -1,4 +1,12 @@
 class Person {
+  static species = 'Homo sapiens';
+  static isAdult(age: number){
+    if(age > 20){
+      return 'Adult Person';
+    }else{
+      return 'Child Person';
+    }
+  }
   constructor(public name: string, protected age: number) {}
 
   incrementAge() {
@@ -34,11 +42,5 @@ class Teacher extends Person {
   }
 }
 
-const Bob = new Person("Bob", 24);
-console.log(Bob);
-
-const Washizawa = new Teacher("Washizawa", 30, "science");
-Washizawa.greeting();
-
-Washizawa.subject = "math";
-console.log(Washizawa.subject);
+console.log(Person.species);
+console.log(Person.isAdult(30))
