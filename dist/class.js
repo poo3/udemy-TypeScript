@@ -29,11 +29,27 @@ var Person = /** @class */ (function () {
 }());
 var Teacher = /** @class */ (function (_super) {
     __extends(Teacher, _super);
-    function Teacher(name, age, subject) {
+    function Teacher(name, age, _subject) {
         var _this = _super.call(this, name, age) || this;
-        _this.subject = subject;
+        _this._subject = _subject;
         return _this;
     }
+    Object.defineProperty(Teacher.prototype, "subject", {
+        get: function () {
+            if (!this._subject) {
+                throw new Error("There is no subject");
+            }
+            return this._subject;
+        },
+        set: function (value) {
+            if (!value) {
+                throw new Error("There is no value");
+            }
+            this._subject = value;
+        },
+        enumerable: false,
+        configurable: true
+    });
     Teacher.prototype.greeting = function () {
         console.log("Hello! My name is " + this.name + ". I am " + this.age + " years old. I teach " + this.subject + ".");
     };
@@ -43,3 +59,5 @@ var Bob = new Person("Bob", 24);
 console.log(Bob);
 var Washizawa = new Teacher("Washizawa", 30, "science");
 Washizawa.greeting();
+Washizawa.subject = "math";
+console.log(Washizawa.subject);
