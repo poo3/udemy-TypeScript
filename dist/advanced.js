@@ -28,6 +28,7 @@ var Jack = {
 descibeProfile(Jack);
 var Dog = /** @class */ (function () {
     function Dog() {
+        this.kind = "dog";
     }
     Dog.prototype.speak = function () {
         console.log("bow-wow!");
@@ -36,6 +37,7 @@ var Dog = /** @class */ (function () {
 }());
 var Bird = /** @class */ (function () {
     function Bird() {
+        this.kind = "bird";
     }
     Bird.prototype.speak = function () {
         console.log("tweet-tweet");
@@ -47,8 +49,12 @@ var Bird = /** @class */ (function () {
 }());
 function havePet(pet) {
     pet.speak();
-    if (pet instanceof Bird) {
-        pet.fly();
+    switch (pet.kind) {
+        case "bird":
+            pet.fly();
     }
+    // if (pet instanceof Bird) {
+    //   pet.fly();
+    // }
 }
 havePet(new Bird());
