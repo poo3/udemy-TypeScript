@@ -58,3 +58,5 @@ function havePet(pet) {
     // }
 }
 havePet(new Bird());
+var input = document.getElementById("input");
+input.value = "input value";
