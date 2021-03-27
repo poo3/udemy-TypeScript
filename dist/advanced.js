@@ -9,10 +9,11 @@ console.log(MixType);
 console.log(Jorge.name);
 function toUpperCase(x) {
     if (typeof x === "string") {
-        return x.toUpperCase;
+        return x.toUpperCase();
     }
-    return;
+    return x;
 }
+console.log(toUpperCase("poo3"));
 function descibeProfile(nomadWorker) {
     if ("role" in nomadWorker) {
         console.log(nomadWorker.role);
@@ -58,5 +59,5 @@ function havePet(pet) {
     // }
 }
 havePet(new Bird());
-var input = document.getElementById("input");
-input.value = "input value";
+// const input = document.getElementById("input") as HTMLInputElement;
+// input.value = "input value";

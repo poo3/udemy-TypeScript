@@ -26,12 +26,16 @@ const MixType = 8080;
 console.log(MixType);
 console.log(Jorge.name);
 
-function toUpperCase(x: string | number) {
+function toUpperCase(x: string): string;
+function toUpperCase(x: number): number;
+function toUpperCase(x: string | number): string | number {
   if (typeof x === "string") {
-    return x.toUpperCase;
+    return x.toUpperCase();
   }
-  return;
+  return x;
 }
+
+console.log(toUpperCase("poo3"));
 
 type NomadWorker = Enginner | Blogger;
 function descibeProfile(nomadWorker: NomadWorker) {
@@ -80,5 +84,5 @@ function havePet(pet: Pet) {
 }
 havePet(new Bird());
 
-const input = document.getElementById("input") as HTMLInputElement;
-input.value = "input value";
+// const input = document.getElementById("input") as HTMLInputElement;
+// input.value = "input value";
