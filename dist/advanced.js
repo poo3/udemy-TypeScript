@@ -1,4 +1,5 @@
 "use strict";
+var _a, _b;
 var Jorge = {
     name: "mac",
     role: "EnginnerBlogger",
@@ -59,5 +60,7 @@ function havePet(pet) {
     // }
 }
 havePet(new Bird());
-// const input = document.getElementById("input") as HTMLInputElement;
-// input.value = "input value";
+var downloadData = {
+    id: 3,
+};
+console.log((_b = (_a = downloadData.user) === null || _a === void 0 ? void 0 : _a.name) === null || _b === void 0 ? void 0 : _b.first);

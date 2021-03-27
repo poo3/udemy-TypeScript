@@ -86,3 +86,17 @@ havePet(new Bird());
 
 // const input = document.getElementById("input") as HTMLInputElement;
 // input.value = "input value";
+
+interface DownloadData {
+  id: number;
+  user?: {
+    name?: {
+      first: string;
+      last: string;
+    };
+  };
+}
+const downloadData: DownloadData = {
+  id: 3,
+};
+console.log(downloadData.user?.name?.first);
