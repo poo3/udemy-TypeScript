@@ -1,5 +1,5 @@
 "use strict";
-var _a, _b;
+var _a, _b, _c;
 var Jorge = {
     name: "mac",
     role: "EnginnerBlogger",
@@ -64,3 +64,5 @@ var downloadData = {
     id: 3,
 };
 console.log((_b = (_a = downloadData.user) === null || _a === void 0 ? void 0 : _a.name) === null || _b === void 0 ? void 0 : _b.first);
+var userData = (_c = downloadData.user) !== null && _c !== void 0 ? _c : "no-user";
+console.log(userData);

@@ -100,3 +100,5 @@ const downloadData: DownloadData = {
   id: 3,
 };
 console.log(downloadData.user?.name?.first);
+const userData = downloadData.user ?? "no-user";
+console.log(userData);
