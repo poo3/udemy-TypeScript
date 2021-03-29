@@ -147,3 +147,9 @@ restFunc(
   3,
   513
 );
+
+const number = [8, 88] as const;
+const Jane = {
+  name: "jane",
+  age: 32,
+} as const;

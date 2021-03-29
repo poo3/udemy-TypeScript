@@ -78,3 +78,8 @@ function restFunc() {
     }
 }
 restFunc(1, "string", true, 1, 2, 85, 3, 54, 6, 2, 468, 68, 45, 465, 45, 3, 513);
+var number = [8, 88];
+var Jane = {
+    name: "jane",
+    age: 32,
+};
