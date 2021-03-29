@@ -110,3 +110,18 @@ interface TmpFunc {
   (x: string): string;
   (y: string): number;
 }
+
+// 関数型のインターセクションはオーバーロードになる
+interface funcA {
+  (a: number, b: string): number;
+  (a: string, b: number): number;
+}
+
+interface funcB {
+  (a: string): number;
+}
+
+let intersectionFunc: funcA & funcB;
+intersectionFunc = function (a: number | string, b?: number | string) {
+  return 0;
+};
