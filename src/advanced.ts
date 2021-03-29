@@ -99,6 +99,14 @@ interface DownloadData {
 const downloadData: DownloadData = {
   id: 3,
 };
+
 console.log(downloadData.user?.name?.first);
 const userData = downloadData.user ?? "no-user";
 console.log(userData);
+
+type id = DownloadData["id"];
+
+interface TmpFunc {
+  (x: string): string;
+  (y: string): number;
+}
