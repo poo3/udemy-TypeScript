@@ -70,3 +70,11 @@ var intersectionFunc;
 intersectionFunc = function (a, b) {
     return 0;
 };
+// レストパラメータにタプルや配列を指定する
+function restFunc() {
+    var args = [];
+    for (var _i = 0; _i < arguments.length; _i++) {
+        args[_i] = arguments[_i];
+    }
+}
+restFunc(1, "string", true, 1, 2, 85, 3, 54, 6, 2, 468, 68, 45, 465, 45, 3, 513);

@@ -125,3 +125,25 @@ let intersectionFunc: funcA & funcB;
 intersectionFunc = function (a: number | string, b?: number | string) {
   return 0;
 };
+
+// レストパラメータにタプルや配列を指定する
+function restFunc(...args: [number, string, boolean, ...number[]]) {}
+restFunc(
+  1,
+  "string",
+  true,
+  1,
+  2,
+  85,
+  3,
+  54,
+  6,
+  2,
+  468,
+  68,
+  45,
+  465,
+  45,
+  3,
+  513
+);
