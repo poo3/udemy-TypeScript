@@ -1,5 +1,5 @@
 "use strict";
 function copy(value) {
-    return value;
+  return value;
 }
 console.log(copy("1"));
