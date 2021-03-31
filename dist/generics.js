@@ -25,3 +25,4 @@ stringLightDataBase.remove("string");
 stringLightDataBase.add("newItem");
 stringLightDataBase.add("secondItem");
 console.log(stringLightDataBase.get());
+var tmp2;

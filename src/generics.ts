@@ -27,3 +27,9 @@ stringLightDataBase.remove("string");
 stringLightDataBase.add("newItem");
 stringLightDataBase.add("secondItem");
 console.log(stringLightDataBase.get());
+
+interface ResponseData<T extends { message: string } = any> {
+  data: T;
+  status: number;
+}
+let tmp2: ResponseData;
