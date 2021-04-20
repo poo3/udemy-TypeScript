@@ -1,9 +1,12 @@
-function Logging(constructor: Function) {
-  console.log("Logging...");
-  console.log(constructor);
+function Logging(message: string) {
+  return function (constructor: Function) {
+    console.log("Logging...");
+    console.log(message);
+    console.log(constructor);
+  };
 }
 
-@Logging
+@Logging("decolator factory")
 class User {
   name = "Quill";
   constructor() {
