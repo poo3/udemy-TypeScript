@@ -1,7 +1,9 @@
-class Foods {
+import { Foodsable } from "./interfaces.js";
+import { Food } from "./food.js";
+export class Foods implements Foodsable {
   public static instance: Foods;
   elements = document.querySelectorAll<HTMLDivElement>(".food");
-  private _activeElements: HTMLElement[] = [];
+  private _activeElements: HTMLDivElement[] = [];
   private _activeElementsScore: number[] = [];
   get activeElements() {
     this._activeElements = [];
